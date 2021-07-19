@@ -38,7 +38,6 @@ class ApiStudentController extends RestController
             'class' => $json_a['class'],
             'email' => $json_a['email']
         ];
-        var_dump($data);
         $result = $students->insert_student($data);
         if ($result > 0) {
             $this->response([
@@ -68,7 +67,7 @@ class ApiStudentController extends RestController
             'class' => $this->put('class'),
             'email' => $this->put('email')
         ];
-        $result = $students->update_student($id, $data);
+        $result = $students->update_student(3, $data);
         if ($result > 0) {
             $this->response([
                 'status' => true,

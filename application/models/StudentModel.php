@@ -39,7 +39,7 @@ class StudentModel extends CI_Model
         return $query->row();
     }
 
-    public function update_student($data, $id)
+    public function update_student($id, $data)
     {
         $this->load->database();
         $this->db->where('id', $id);
