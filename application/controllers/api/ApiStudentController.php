@@ -67,7 +67,7 @@ class ApiStudentController extends RestController
             'class' => $this->put('class'),
             'email' => $this->put('email')
         ];
-        $result = $students->update_student(3, $data);
+        $result = $students->update_student($id, $data);
         if ($result > 0) {
             $this->response([
                 'status' => true,
